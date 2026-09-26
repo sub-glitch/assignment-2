@@ -1,11 +1,13 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 COMMAND=$1
 ARGUMENT=$2
 
 case "$COMMAND" in
     system)
-        ./health-check.sh system
+        "$SCRIPT_DIR/health-check.sh" system
         ;;
 
     network)
@@ -15,11 +17,11 @@ case "$COMMAND" in
             exit 2
         fi
 
-        ./health-check.sh network "$ARGUMENT"
+        "$SCRIPT_DIR/health-check.sh" network "$ARGUMENT"
         ;;
 
     disk)
-        ./health-check.sh disk
+        "$SCRIPT_DIR/health-check.sh" disk
         ;;
 
     help)
