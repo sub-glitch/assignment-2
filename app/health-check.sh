@@ -41,7 +41,9 @@ case "$COMMAND" in
         ;;
 
     disk)
-
+        echo "Disk INFO"
+        echo "==============================="
+        df -h
         ;;
 
     *)
