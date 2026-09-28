@@ -14,7 +14,7 @@ case "$COMMAND" in
         echo "Uptime: $(uptime -p)"
 
         echo 
-        echo "Memory: $(free-h)"
+        echo "Memory: $(free -h)"
 
         echo
         echo "CPU:"
